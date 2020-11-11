@@ -55,7 +55,7 @@ public class person {
             System.out.println(people.get(i).getName()+", "+people.get(i).getAge());
         }
     }
-	public void add() {
+	public void add(String name, int age) {
 		ArrayList<person> people = new ArrayList<>(); 
 		person bob= new person("Bob", 25);
 	    person barbara= new person("Barbara", 34);
@@ -74,23 +74,12 @@ public class person {
 		
 		
 		//NAME ENTRY
-		Scanner nameScan = new Scanner(System.in);
-        System.out.println("Enter their name");
-        String nameEntry = nameScan.nextLine();
-        //nameScan.close();
-        
-        
-        //AGE ENTRY
-        Scanner ageScan = new Scanner(System.in);
-        System.out.println("Enter their age");
-        int ageEntry = ageScan.nextInt();
+		
         //ageScan.close();
-        
-        
-        ageEntry = age;
-        nameEntry = name;
-        person newPerson = new person(name, age);
-        
+        int ageEntry = age;
+        String nameEntry = name;
+        //Add person to list
+        person newPerson = new person(nameEntry, ageEntry);
         people.add(newPerson);
         for(int i = 0; i < people.size(); i++) {
             System.out.println(people.get(i).getName()+", "+people.get(i).getAge());
